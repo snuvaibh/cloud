@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Crumb — A Luxury Cloud Kitchen Experience</title>
+  <meta name="description" content="Velvet Crumb is a luxury cloud kitchen crafting handmade desserts with warmth, love, and a touch of magic. Coming soon to your city." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ✨ Floating Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav-pill" id="main-nav" role="navigation" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-link active" id="nav-home">Home</a>
+      <a href="#about" class="nav-link" id="nav-about">About</a>
+      <a href="#coming-soon" class="nav-link" id="nav-comingsoon">Coming Soon</a>
+      <a href="#blog" class="nav-link" id="nav-blog">Food Blog</a>
+      <a href="dashboard.html" class="nav-link nav-dashboard" id="nav-dashboard">
+        <span class="lock-icon">🔐</span> Dashboard
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero-section" id="home">
+    <!-- Floating Doodle Elements -->
+    <div class="doodle doodle-1" aria-hidden="true">🧁</div>
+    <div class="doodle doodle-2" aria-hidden="true">🍮</div>
+    <div class="doodle doodle-3" aria-hidden="true">✨</div>
+    <div class="doodle doodle-4" aria-hidden="true">🌸</div>
+    <div class="doodle doodle-5" aria-hidden="true">🍰</div>
+    <div class="doodle doodle-6" aria-hidden="true">⭐</div>
+    <div class="doodle doodle-7" aria-hidden="true">🧇</div>
+
+    <div class="hero-content">
+      <!-- Logo -->
+      <div class="logo-wrapper fade-up" id="logo">
+        <h1 class="logo-script">Velvet Crumb</h1>
+        <p class="logo-tagline">A luxury cloud kitchen experience</p>
+      </div>
+
+      <!-- Mascot with Clouds -->
+      <div class="mascot-container fade-up delay-1" aria-label="Cute pudding mascot floating on cream clouds">
+        <div class="mascot-glow"></div>
+        <div class="clouds-wrapper">
+          <div class="cloud cloud-left"></div>
+          <div class="cloud cloud-right"></div>
+          <div class="cloud cloud-center"></div>
+        </div>
+        <div class="mascot-figure float-anim">
+          <img src="images/mascot.png" alt="Velvet Crumb cute pudding mascot" class="mascot-img" />
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text fade-up delay-2">
+        <h2 class="hero-heading">The coziest cloud kitchen<br /><em>experience</em></h2>
+        <p class="hero-subtext">Handcrafted sweetness. Coming soon to your city.</p>
+        <a href="#coming-soon" class="cta-btn" id="explore-menu-btn" aria-label="Explore our menu">
+          Explore Menu
+          <span class="btn-shimmer"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Wave -->
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#E8D5B7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ COMING SOON DELIGHTS ============ -->
+  <section class="delights-section" id="coming-soon">
+    <div class="section-header fade-up">
+      <div class="section-ornament">✦</div>
+      <h2 class="section-title">Coming Soon Delights</h2>
+      <p class="section-subtitle">A preview of what's baking in our cozy kitchen</p>
+      <div class="section-ornament">✦</div>
+    </div>
+
+    <div class="delights-grid fade-up delay-1">
+
+      <!-- Card 1 -->
+      <article class="delight-card" id="card-mochi" aria-label="Matcha Mochi Delight">
+        <div class="card-img-wrapper">
+          <img src="images/mochi.png" alt="Soft homemade mochi balls" class="card-img" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Silken Mochi Dreams</h3>
+          <p class="card-desc">Pillowy soft rice cakes dusted in powdered cream, filled with velvety sweet bean paste</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="delight-card" id="card-cakeroll" aria-label="Strawberry Cream Roll">
+        <div class="card-img-wrapper">
+          <img src="images/cake_roll.png" alt="Strawberry cream cake roll" class="card-img" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Strawberry Bliss Roll</h3>
+          <p class="card-desc">Featherlight sponge embracing strawberry compote & hand-whipped vanilla cream</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="delight-card" id="card-pudding" aria-label="Caramel Custard Pudding">
+        <div class="card-img-wrapper">
+          <img src="images/pudding.png" alt="Japanese caramel custard pudding" class="card-img" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Golden Caramel Pudding</h3>
+          <p class="card-desc">Wobbly Japanese-style custard crowned with amber caramel that pools like liquid gold</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="delight-card" id="card-cheesecake" aria-label="Cotton Cheesecake">
+        <div class="card-img-wrapper">
+          <img src="images/cheesecake.png" alt="Japanese cotton cheesecake" class="card-img" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Cloud Cotton Cheesecake</h3>
+          <p class="card-desc">Impossibly light Japanese cheesecake — soft as a cloud, melting at first bite</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="delight-card" id="card-crepe" aria-label="Mille Crepe Cake">
+        <div class="card-img-wrapper">
+          <img src="images/crepe.png" alt="Mille crepe cake" class="card-img" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Mille Feuille de Crêpe</h3>
+          <p class="card-desc">Twenty layers of paper-thin crepes & pastry cream — a labor of love in every slice</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 6 — CSS Illustrated -->
+      <article class="delight-card" id="card-tart" aria-label="Caramel Tart">
+        <div class="card-img-wrapper card-illustrated">
+          <div class="illustrated-dessert tart-illustration">
+            <div class="tart-base"></div>
+            <div class="tart-filling"></div>
+            <div class="tart-glaze"></div>
+            <div class="tart-garnish"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Velvet Caramel Tart</h3>
+          <p class="card-desc">Buttery shortcrust embracing glossy salted caramel — the perfect harmony of sweet & savory</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 7 — CSS Illustrated -->
+      <article class="delight-card" id="card-macarons" aria-label="French Macarons">
+        <div class="card-img-wrapper card-illustrated">
+          <div class="illustrated-dessert macaron-illustration">
+            <div class="macaron mac-1"></div>
+            <div class="macaron mac-2"></div>
+            <div class="macaron mac-3"></div>
+            <div class="mac-shadow"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Parisian Macarons</h3>
+          <p class="card-desc">Delicate almond shells in warm nude tones, filled with copper-hued caramel ganache</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+      <!-- Card 8 — CSS Illustrated -->
+      <article class="delight-card" id="card-brownie" aria-label="Fudge Brownie">
+        <div class="card-img-wrapper card-illustrated">
+          <div class="illustrated-dessert brownie-illustration">
+            <div class="brownie-base"></div>
+            <div class="brownie-crack"></div>
+            <div class="brownie-drizzle"></div>
+            <div class="brownie-sparkle s1"></div>
+            <div class="brownie-sparkle s2"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Fudge Velvet Brownie</h3>
+          <p class="card-desc">Dense, rich, crinkle-topped chocolate fudge brownie with a molten center of pure warmth</p>
+          <span class="coming-soon-badge">💫 Coming Soon</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="view-all-wrapper fade-up delay-2">
+      <button class="view-all-btn" aria-label="View all items">View All Delights</button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about-section" id="about">
+    <div class="about-deco about-deco-left" aria-hidden="true">
+      <div class="about-deco-emoji">🧁</div>
+      <div class="about-deco-emoji">🍮</div>
+      <div class="about-deco-emoji">✨</div>
+    </div>
+
+    <div class="about-content fade-up">
+      <div class="about-ornament">⋆ ✦ ⋆</div>
+      <h2 class="about-title">Made with flour,<br /><em>butter & boundless love</em></h2>
+      <div class="about-divider"></div>
+      <p class="about-text">
+        Velvet Crumb was born from a single, tender idea — that food made with love
+        should feel like a warm embrace. We are a cloud kitchen rooted in the belief
+        that every dessert tells a story of patience, craft, and care.
+      </p>
+      <p class="about-text">
+        From hand-rolling mochi at dawn to slow-churning custards until the golden hour,
+        every recipe in our kitchen is a quiet act of devotion. We source only the
+        finest ingredients — real butter, farm cream, single-origin vanilla — because
+        your moment of sweetness deserves nothing less.
+      </p>
+      <p class="about-text-emphasis">
+        "A cloud kitchen built not just on recipes, but on rituals."
+      </p>
+      <div class="about-signature">— The Velvet Crumb Kitchen</div>
+    </div>
+
+    <div class="about-deco about-deco-right" aria-hidden="true">
+      <div class="about-deco-emoji">🌸</div>
+      <div class="about-deco-emoji">🍰</div>
+      <div class="about-deco-emoji">⭐</div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG SECTION ============ -->
+  <section class="blog-section" id="blog">
+    <div class="section-header fade-up">
+      <div class="section-ornament">✦</div>
+      <h2 class="section-title">The Baking Journal</h2>
+      <p class="section-subtitle">Stories, recipes & sweet little musings from our kitchen</p>
+      <div class="section-ornament">✦</div>
+    </div>
+
+    <div class="blog-grid fade-up delay-1">
+
+      <!-- Blog Post 1 -->
+      <article class="blog-card" id="blog-card-1" aria-label="Blog post: The Art of the Perfect Caramel">
+        <div class="blog-card-img">
+          <div class="blog-visual blog-visual-1">
+            <div class="blog-vis-content">
+              <div class="bv-circle bvc-1"></div>
+              <div class="bv-circle bvc-2"></div>
+              <div class="bv-icon">🍮</div>
+              <div class="bv-title-mini">caramel stories</div>
+            </div>
+          </div>
+          <div class="blog-tag">Recipe</div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">The Art of the Perfect Caramel</h3>
+          <p class="blog-card-caption">How we spent 30 days perfecting a single caramel recipe — and why every second was worth it.</p>
+          <button class="read-more-btn" aria-label="Read more about caramel">Read More →</button>
+        </div>
+      </article>
+
+      <!-- Blog Post 2 -->
+      <article class="blog-card" id="blog-card-2" aria-label="Blog post: Morning Rituals in our Kitchen">
+        <div class="blog-card-img">
+          <div class="blog-visual blog-visual-2">
+            <div class="blog-vis-content">
+              <div class="bv-circle bvc-1"></div>
+              <div class="bv-circle bvc-2"></div>
+              <div class="bv-icon">🌅</div>
+              <div class="bv-title-mini">kitchen diaries</div>
+            </div>
+          </div>
+          <div class="blog-tag">Journal</div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Morning Rituals in our Cloud Kitchen</h3>
+          <p class="blog-card-caption">Before the city wakes, our ovens hum. A gentle look at the quiet poetry of early-hour baking.</p>
+          <button class="read-more-btn" aria-label="Read more about morning rituals">Read More →</button>
+        </div>
+      </article>
+
+      <!-- Blog Post 3 -->
+      <article class="blog-card" id="blog-card-3" aria-label="Blog post: Why We Only Use Cultured Butter">
+        <div class="blog-card-img">
+          <div class="blog-visual blog-visual-3">
+            <div class="blog-vis-content">
+              <div class="bv-circle bvc-1"></div>
+              <div class="bv-circle bvc-2"></div>
+              <div class="bv-icon">🧈</div>
+              <div class="bv-title-mini">ingredient love</div>
+            </div>
+          </div>
+          <div class="blog-tag">Ingredients</div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Why We Only Use Cultured Butter</h3>
+          <p class="blog-card-caption">The ingredient obsessions that define Velvet Crumb — and the difference they make in every bite.</p>
+          <button class="read-more-btn" aria-label="Read more about cultured butter">Read More →</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-logo">Velvet Crumb</div>
+      <p class="footer-tagline">Handcrafted sweetness, coming soon to your city 🧁</p>
+      <div class="footer-links">
+        <a href="#home" class="f-link">Home</a>
+        <a href="#about" class="f-link">About</a>
+        <a href="#coming-soon" class="f-link">Menu</a>
+        <a href="#blog" class="f-link">Blog</a>
+      </div>
+      <div class="footer-socials">
+        <span class="social-dot" aria-label="Instagram">📷</span>
+        <span class="social-dot" aria-label="Pinterest">📌</span>
+        <span class="social-dot" aria-label="TikTok">🎵</span>
+      </div>
+      <p class="footer-copy">© 2026 Velvet Crumb. All rights reserved. Made with 🧁 &amp; love.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

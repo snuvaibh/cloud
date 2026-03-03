@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — Velvet Crumb Kitchen</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+    <!-- ======= LOGIN SCREEN ======= -->
+    <div id="login-screen">
+        <div class="login-card">
+            <div class="login-logo">Velvet Crumb</div>
+            <div class="login-subtitle">Private Kitchen Dashboard</div>
+
+            <label class="login-label" for="dash-username">Username</label>
+            <input class="login-input" type="text" id="dash-username" placeholder="Enter username"
+                autocomplete="username" />
+
+            <label class="login-label" for="dash-password">Password</label>
+            <input class="login-input" type="password" id="dash-password" placeholder="Enter password"
+                autocomplete="current-password" />
+
+            <button class="login-btn" id="login-btn" aria-label="Login to dashboard">Login to Dashboard</button>
+
+            <p class="login-error" id="login-error">✦ Incorrect credentials. Please try again.</p>
+
+            <p class="login-hint">Hint: username <em>owner</em> / password <em>velvetcrumb</em></p>
+        </div>
+    </div>
+
+    <!-- ======= DASHBOARD SCREEN ======= -->
+    <div id="dashboard-screen">
+
+        <!-- Dash Nav -->
+        <nav class="dash-nav" role="navigation" aria-label="Dashboard Navigation">
+            <div class="dash-logo">Velvet Crumb</div>
+            <div class="dash-nav-right">
+                <span class="dash-user-badge">Welcome back, Owner 🧁</span>
+                <button class="logout-btn" id="logout-btn" aria-label="Logout">Logout</button>
+            </div>
+        </nav>
+
+        <main class="dash-main">
+            <!-- Header -->
+            <div class="dash-header">
+                <h1 class="dash-welcome">Good evening, Chef ✨</h1>
+                <p class="dash-welcome-sub">Manage your blog posts and keep the kitchen stories fresh.</p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row" id="stats-row">
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-posts">0</div>
+                    <div class="stat-label">Blog Posts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Menu Items</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-month">Mar</div>
+                    <div class="stat-label">Current Month</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dash-grid">
+
+                <!-- Add / Edit Post Form -->
+                <div class="dash-card" id="post-form-card">
+                    <h2 class="dash-card-title"><span class="icon">✏️</span> <span id="form-title-label">Add New Blog
+                            Post</span></h2>
+
+                    <input type="hidden" id="edit-post-id" value="" />
+
+                    <div class="form-group">
+                        <label class="form-label" for="post-title">Post Title</label>
+                        <input class="form-input" type="text" id="post-title" placeholder="e.g. The Magic of Mochi" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="post-caption">Caption / Excerpt</label>
+                        <textarea class="form-textarea" id="post-caption"
+                            placeholder="A short description of this post..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="post-tag">Category Tag</label>
+                        <input class="form-input" type="text" id="post-tag"
+                            placeholder="e.g. Recipe, Journal, Ingredients" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="post-emoji">Post Icon (Emoji)</label>
+                        <input class="form-input" type="text" id="post-emoji" placeholder="e.g. 🍪" maxlength="4" />
+                    </div>
+
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;">
+                        <button class="btn-primary" id="save-post-btn" aria-label="Save blog post">Save Post 🧁</button>
+                        <button class="btn-danger" id="cancel-edit-btn" style="display:none;"
+                            aria-label="Cancel editing">Cancel Edit</button>
+                    </div>
+                </div>
+
+                <!-- Posts List -->
+                <div class="dash-card">
+                    <h2 class="dash-card-title"><span class="icon">📖</span> Existing Blog Posts</h2>
+                    <div class="post-list" id="post-list">
+                        <p class="empty-state" id="empty-state">No posts yet. Add your first one! 🌸</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast-msg" role="alert" aria-live="polite">✦ Changes saved beautifully!</div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
